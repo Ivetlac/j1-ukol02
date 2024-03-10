@@ -14,9 +14,9 @@ public class HlavniProgram {
     public void start() {
         zofka.setPenColor(Color.pink);
         zofka.turnLeft(90);
-       nakresliZmrzlinu(82.0, 14.0);
+        nakresliZmrzlinu(82.0, 14.0);
         posun();
-        nakresliSnehuliaka(30.0, 20.0, 15.0,5.0);
+        nakresliSnehuliaka(30.0, 20.0, 15.0, 5.0);
         zofka.penUp();
         zofka.turnRight(90);
         zofka.move(700);
@@ -24,7 +24,7 @@ public class HlavniProgram {
         zofka.move(200);
         zofka.turnLeft(180);
         zofka.penDown();
-        nakresliMasinku(10.0,17.5,400.0,200.0);
+        nakresliMasinku(10.0, 17.5, 400.0, 200.0);
     }
 
     private void posun() {
@@ -108,9 +108,10 @@ public class HlavniProgram {
         nakresliKolecko(ruky / 2);
 
     }
-    public void nakresliMasinku(double koleso,double velkeKoleso, double velkostObdlznikaA, double velkostObdlznikaB) {
-    zofka.turnLeft(90);
-     nakresliKolecko(koleso);
+
+    public void nakresliMasinku(double koleso, double velkeKoleso, double velkostObdlznikaA, double velkostObdlznikaB) {
+        zofka.turnLeft(90);
+        nakresliKolecko(koleso);
         zofka.penUp();
         zofka.move(140);
         zofka.penDown();
@@ -119,13 +120,13 @@ public class HlavniProgram {
         zofka.move(90);
         zofka.turnRight(180);
         zofka.penDown();
-        nakresliObdelnik(velkostObdlznikaA,velkostObdlznikaB);
-       zofka.turnLeft(90);
-      nakresliRovnostrannyTrojuholnik(velkostObdlznikaA/3);
-      zofka.turnRight(90);
-      zofka.move(velkostObdlznikaA);
-      //zofka.turnLeft(90);
-        nakresliObdelnik(velkostObdlznikaB,velkostObdlznikaA);
+        nakresliObdelnik(velkostObdlznikaA, velkostObdlznikaB);
+        zofka.turnLeft(90);
+        nakresliRovnostrannyTrojuholnik(velkostObdlznikaA / 3);
+        zofka.turnRight(90);
+        zofka.move(velkostObdlznikaA);
+        //zofka.turnLeft(90);
+        nakresliObdelnik(velkostObdlznikaB, velkostObdlznikaA);
         zofka.turnRight(90);
         nakresliKolecko(velkeKoleso);
     }
